@@ -1,0 +1,101 @@
+﻿
+================================================================================
+  STEP 1: LOADING CLEANED DATA
+================================================================================
+  Training features : (960, 61)
+  Training target   : (960,)  (churn rate: 27.5%)
+  Test features     : (240, 61)
+  Feature count     : 61
+
+================================================================================
+  STEP 2: FEATURE ANALYSIS & SELECTION
+================================================================================
+
+--- 2.1 Quick Feature Importance Scan ---
+
+  Rank  Feature                                        Importance
+  -----------------------------------------------------------------
+     1  clv_spend_ratio                                0.1365  ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê
+     2  estimated_clv_usd                              0.0590  ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê
+     3  tenure_months                                  0.0560  ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê
+     4  days_since_last_purchase                       0.0479  ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê
+     5  avg_monthly_spend_usd                          0.0446  ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê
+     6  spend_per_tenure                               0.0439  ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê
+     7  email_open_rate                                0.0409  ÔûêÔûêÔûêÔûêÔûêÔûêÔûêÔûê
+     8  nps_score                                      0.0356  ÔûêÔûêÔûêÔûêÔûêÔûêÔûê
+     9  support_intensity                              0.0349  ÔûêÔûêÔûêÔûêÔûêÔûê
+    10  discount_usage_rate                            0.0330  ÔûêÔûêÔûêÔûêÔûêÔûê
+    11  digital_preference                             0.0319  ÔûêÔûêÔûêÔûêÔûêÔûê
+    12  discount_dependency                            0.0314  ÔûêÔûêÔûêÔûêÔûêÔûê
+    13  engagement_score                               0.0253  ÔûêÔûêÔûêÔûêÔûê
+    14  risk_score                                     0.0245  ÔûêÔûêÔûêÔûê
+    15  app_sessions_last_30d                          0.0243  ÔûêÔûêÔûêÔûê
+    16  age                                            0.0241  ÔûêÔûêÔûêÔûê
+    17  website_visits_last_30d                        0.0237  ÔûêÔûêÔûêÔûê
+    18  products_owned                                 0.0194  ÔûêÔûêÔûê
+    19  late_payments_last_12m                         0.0191  ÔûêÔûêÔûê
+    20  support_tickets_last_90d                       0.0191  ÔûêÔûêÔûê
+
+  ÔÜá´©Å  27 features with near-zero importance (< 0.005):
+     - gender_Female
+     - gender_Male
+     - city_tier_Tier 2
+     - age_group_36-45
+     - contract_type_Quarterly
+     - contract_type_Annual
+     - marketing_channel_Paid Ads
+     - clv_segment_Low
+     - nps_category_Promoter
+     - marketing_channel_Email
+     - marketing_channel_Referral
+     - recency_bucket_Moderate
+     - subscription_type_Standard
+     - recency_bucket_Recent
+     - nps_category_Passive
+     - recency_bucket_Distant
+     - subscription_type_Premium
+     - city_tier_Tier 3
+     - tenure_category_New (<6m)
+     - marketing_channel_Organic Search
+     - age_group_26-35
+     - age_group_18-25
+     - age_group_46-55
+     - gender_Other
+     - tenure_category_Early (6-12m)
+     - recency_bucket_Very Recent
+     - age_group_55+
+  Ôä╣´©Å  Keeping all features ÔÇö tree models handle this well
+
+--- 2.2 Correlation Analysis ---
+  Found 3 highly correlated pairs (> 0.85):
+    late_payments_last_12m              <-> payment_reliability                  r=1.000
+    clv_spend_ratio                     <-> tenure_months                        r=0.931
+    gender_Female                       <-> gender_Male                          r=0.922
+  Ôä╣´©Å  Note: Tree models are robust to multicollinearity, keeping all
+
+  Ô£à Selected 61 features for modeling
+
+================================================================================
+  STEP 3: BASELINE MODEL COMPARISON
+================================================================================
+
+  Running 5-fold cross-validation on 5 models...
+  (using class_weight/scale_pos_weight for imbalance handling)
+
+  Model                      Accuracy        F1  Precision    Recall   AUC-ROC    Time
+  -------------------------------------------------------------------------------------
+  Logistic Regression         0.9812    0.9665     0.9526    0.9811    0.9975    3.7s
+  Random Forest               0.7875    0.4411     0.8011    0.3070    0.8904    3.3s
+  Gradient Boosting           0.9729    0.9485     0.9920    0.9092    0.9963    3.7s
+  XGBoost                     0.9771    0.9577     0.9730    0.9432    0.9971    3.1s
+  LightGBM                    0.9865    0.9753     0.9850    0.9660    0.9988    2.5s
+
+  ­şÅå Best baseline model by F1: LightGBM (F1=0.9753)
+
+================================================================================
+  STEP 4: HYPERPARAMETER TUNING (Optuna)
+================================================================================
+
+  Tuning XGBoost (100 trials)... Done! Best F1=0.9697 (35.7s)
+    Best params: {"n_estimators": 627, "max_depth": 9, "learning_rate": 0.05001127941288432, "subsample": 0.6025927826108561, "colsample_...
+

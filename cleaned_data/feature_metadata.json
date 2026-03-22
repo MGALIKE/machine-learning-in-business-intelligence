@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-03-16T13:53:18.313025",
+  "pipeline_version": "1.0",
+  "train_shape": [
+    960,
+    63
+  ],
+  "test_shape": [
+    240,
+    62
+  ],
+  "target_column": "churned",
+  "id_column": "customer_id",
+  "leakage_columns_removed": [
+    "recommended_action"
+  ],
+  "original_categorical_features": [
+    "gender",
+    "city_tier",
+    "subscription_type",
+    "contract_type",
+    "marketing_channel",
+    "clv_segment",
+    "recency_bucket",
+    "age_group",
+    "tenure_category",
+    "nps_category"
+  ],
+  "original_numerical_features": [
+    "age",
+    "tenure_months",
+    "avg_monthly_spend_usd",
+    "website_visits_last_30d",
+    "app_sessions_last_30d",
+    "support_tickets_last_90d",
+    "late_payments_last_12m",
+    "discount_usage_rate",
+    "email_open_rate",
+    "nps_score",
+    "products_owned",
+    "returns_last_12m",
+    "days_since_last_purchase",
+    "estimated_clv_usd",
+    "engagement_score",
+    "spend_per_tenure",
+    "support_intensity",
+    "payment_reliability",
+    "clv_spend_ratio",
+    "risk_score",
+    "high_risk",
+    "digital_preference",
+    "discount_dependency"
+  ],
+  "engineered_features": [
+    "engagement_score",
+    "spend_per_tenure",
+    "support_intensity",
+    "payment_reliability",
+    "clv_spend_ratio",
+    "recency_bucket",
+    "age_group",
+    "tenure_category",
+    "nps_category",
+    "risk_score",
+    "high_risk",
+    "digital_preference",
+    "discount_dependency"
+  ],
+  "total_encoded_features": 61,
+  "class_distribution": {
+    "not_churned": 696,
+    "churned": 264,
+    "churn_rate": 0.275
+  },
+  "key_findings": [
+    "No missing values in either dataset",
+    "No duplicate rows or IDs",
+    "No train/test ID overlap (no data leakage there)",
+    "'recommended_action' has PERFECT correlation with 'churned' \u2014 EXCLUDED as leakage",
+    "NPS scores range from -59 to 100 (negatives are valid)",
+    "Class imbalance: 72.5% not churned vs 27.5% churned (ratio 2.64:1)",
+    "Top churn predictors: estimated_clv_usd, late_payments, days_since_last_purchase, tenure_months"
+  ]
+}

@@ -1,0 +1,2158 @@
+{
+  "kpis": {
+    "totalCustomers": 1200,
+    "overallChurnRate": 27.5,
+    "avgClv": 2746,
+    "highRiskCount": 64,
+    "revenueAtRisk": 175744
+  },
+  "churnDrivers": [
+    {
+      "feature": "clv_spend_ratio",
+      "xgb_imp": 0.039830368,
+      "lgbm_imp": 0.2947882736156352,
+      "xgb_rank": 5.0,
+      "lgbm_rank": 1.0,
+      "avg_rank": 3.0
+    },
+    {
+      "feature": "tenure_months",
+      "xgb_imp": 0.02546736,
+      "lgbm_imp": 0.2129478827361563,
+      "xgb_rank": 8.0,
+      "lgbm_rank": 2.0,
+      "avg_rank": 5.0
+    },
+    {
+      "feature": "support_intensity",
+      "xgb_imp": 0.037286427,
+      "lgbm_imp": 0.0207654723127035,
+      "xgb_rank": 6.0,
+      "lgbm_rank": 8.5,
+      "avg_rank": 7.25
+    },
+    {
+      "feature": "avg_monthly_spend_usd",
+      "xgb_imp": 0.01844883,
+      "lgbm_imp": 0.0403094462540716,
+      "xgb_rank": 12.0,
+      "lgbm_rank": 5.0,
+      "avg_rank": 8.5
+    },
+    {
+      "feature": "days_since_last_purchase",
+      "xgb_imp": 0.021384027,
+      "lgbm_imp": 0.0342019543973941,
+      "xgb_rank": 11.0,
+      "lgbm_rank": 6.0,
+      "avg_rank": 8.5
+    },
+    {
+      "feature": "tenure_category_Loyal (4y+)",
+      "xgb_imp": 0.08454517,
+      "lgbm_imp": 0.0118078175895765,
+      "xgb_rank": 2.0,
+      "lgbm_rank": 16.0,
+      "avg_rank": 9.0
+    },
+    {
+      "feature": "risk_score",
+      "xgb_imp": 0.07466616,
+      "lgbm_imp": 0.0085504885993485,
+      "xgb_rank": 3.0,
+      "lgbm_rank": 18.5,
+      "avg_rank": 10.75
+    },
+    {
+      "feature": "products_owned",
+      "xgb_imp": 0.012289448,
+      "lgbm_imp": 0.0895765472312703,
+      "xgb_rank": 20.0,
+      "lgbm_rank": 3.0,
+      "avg_rank": 11.5
+    },
+    {
+      "feature": "email_open_rate",
+      "xgb_imp": 0.015941514,
+      "lgbm_imp": 0.0207654723127035,
+      "xgb_rank": 15.0,
+      "lgbm_rank": 8.5,
+      "avg_rank": 11.75
+    },
+    {
+      "feature": "support_tickets_last_90d",
+      "xgb_imp": 0.025458956,
+      "lgbm_imp": 0.0126221498371335,
+      "xgb_rank": 9.0,
+      "lgbm_rank": 15.0,
+      "avg_rank": 12.0
+    }
+  ],
+  "riskSegments": [
+    {
+      "name": "High Risk",
+      "value": 64,
+      "color": "#f43f5e"
+    },
+    {
+      "name": "Medium Risk",
+      "value": 0,
+      "color": "#38bdf8"
+    },
+    {
+      "name": "Low Risk",
+      "value": 176,
+      "color": "#8b5cf6"
+    }
+  ],
+  "tenureImpact": [
+    {
+      "tenure": "New (<6m)",
+      "churnRate": 44.1,
+      "count": 59
+    },
+    {
+      "tenure": "Early (6-12m)",
+      "churnRate": 43.5,
+      "count": 69
+    },
+    {
+      "tenure": "Dev (1-2y)",
+      "churnRate": 31.6,
+      "count": 174
+    },
+    {
+      "tenure": "Estab (2-4y)",
+      "churnRate": 26.0,
+      "count": 334
+    },
+    {
+      "tenure": "Loyal (4y+)",
+      "churnRate": 20.4,
+      "count": 324
+    }
+  ],
+  "engagementImpact": [
+    {
+      "engagement": "Very Low",
+      "churnRate": 27.9
+    },
+    {
+      "engagement": "Low",
+      "churnRate": 30.1
+    },
+    {
+      "engagement": "Medium",
+      "churnRate": 30.9
+    },
+    {
+      "engagement": "High",
+      "churnRate": 24.4
+    },
+    {
+      "engagement": "Very High",
+      "churnRate": 23.3
+    }
+  ],
+  "clvSegments": [
+    {
+      "segment": "Low",
+      "churnRate": 41.3
+    },
+    {
+      "segment": "Medium",
+      "churnRate": 33.9
+    },
+    {
+      "segment": "High",
+      "churnRate": 13.3
+    }
+  ],
+  "contractStats": [
+    {
+      "contract": "Annual",
+      "churnRate": 19.2,
+      "count": 213
+    },
+    {
+      "contract": "Monthly",
+      "churnRate": 31.3,
+      "count": 533
+    },
+    {
+      "contract": "Quarterly",
+      "churnRate": 26.2,
+      "count": 214
+    }
+  ],
+  "npsStats": [
+    {
+      "category": "Detractor",
+      "churnRate": 33.1,
+      "count": 329
+    },
+    {
+      "category": "Passive",
+      "churnRate": 28.0,
+      "count": 311
+    },
+    {
+      "category": "Promoter",
+      "churnRate": 21.2,
+      "count": 320
+    }
+  ],
+  "paymentStats": [
+    {
+      "group": "0 Late",
+      "churnRate": 20.5,
+      "count": 405
+    },
+    {
+      "group": "1-2 Late",
+      "churnRate": 29.9,
+      "count": 478
+    },
+    {
+      "group": "3-5 Late",
+      "churnRate": 48.7,
+      "count": 76
+    },
+    {
+      "group": "6+ Late",
+      "churnRate": 100.0,
+      "count": 1
+    }
+  ],
+  "modelPerformance": {
+    "f1": 98.5,
+    "precision": 98.9,
+    "recall": 98.1,
+    "roc_auc": 99.8,
+    "accuracy": 99.2,
+    "champion_model": "Stacking",
+    "holdout_auc": 99.2
+  },
+  "customerDirectory": [
+    {
+      "id": "CUST100586",
+      "clv": 1325,
+      "tenure": 26,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100592",
+      "clv": 2526,
+      "tenure": 28,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100962",
+      "clv": 1022,
+      "tenure": 52,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100747",
+      "clv": 1296,
+      "tenure": 49,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST101038",
+      "clv": 3079,
+      "tenure": 61,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100880",
+      "clv": 804,
+      "tenure": 4,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST101095",
+      "clv": 1945,
+      "tenure": 17,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100928",
+      "clv": 1961,
+      "tenure": 27,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100651",
+      "clv": 811,
+      "tenure": 1,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100871",
+      "clv": 2267,
+      "tenure": 22,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100463",
+      "clv": 2947,
+      "tenure": 42,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100385",
+      "clv": 1206,
+      "tenure": 1,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100186",
+      "clv": 1924,
+      "tenure": 31,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100295",
+      "clv": 3180,
+      "tenure": 42,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100036",
+      "clv": 1078,
+      "tenure": 8,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100954",
+      "clv": 1605,
+      "tenure": 22,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST101048",
+      "clv": 1669,
+      "tenure": 42,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100397",
+      "clv": 1187,
+      "tenure": 18,
+      "riskScore": 88,
+      "status": "At Risk",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100013",
+      "clv": 2320,
+      "tenure": 16,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100851",
+      "clv": 1515,
+      "tenure": 43,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST101174",
+      "clv": 2366,
+      "tenure": 48,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100401",
+      "clv": 2312,
+      "tenure": 47,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100207",
+      "clv": 3820,
+      "tenure": 56,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST101060",
+      "clv": 5047,
+      "tenure": 58,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100021",
+      "clv": 1099,
+      "tenure": 2,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100510",
+      "clv": 2722,
+      "tenure": 71,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100064",
+      "clv": 595,
+      "tenure": 63,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100205",
+      "clv": 1762,
+      "tenure": 22,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100098",
+      "clv": 3793,
+      "tenure": 44,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100452",
+      "clv": 1576,
+      "tenure": 37,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100766",
+      "clv": 2335,
+      "tenure": 25,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST101145",
+      "clv": 1864,
+      "tenure": 16,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100952",
+      "clv": 1220,
+      "tenure": 14,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100297",
+      "clv": 843,
+      "tenure": 23,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100524",
+      "clv": 1741,
+      "tenure": 36,
+      "riskScore": 87,
+      "status": "At Risk",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100987",
+      "clv": 2726,
+      "tenure": 68,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST101170",
+      "clv": 1475,
+      "tenure": 48,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100646",
+      "clv": 496,
+      "tenure": 19,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100014",
+      "clv": 656,
+      "tenure": 6,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100985",
+      "clv": 361,
+      "tenure": 34,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100330",
+      "clv": 738,
+      "tenure": 26,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100710",
+      "clv": 4606,
+      "tenure": 52,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST101080",
+      "clv": 1472,
+      "tenure": 9,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100343",
+      "clv": 1411,
+      "tenure": 11,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100293",
+      "clv": 6507,
+      "tenure": 72,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100748",
+      "clv": 1632,
+      "tenure": 16,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100571",
+      "clv": 3137,
+      "tenure": 65,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100805",
+      "clv": 2139,
+      "tenure": 37,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100130",
+      "clv": 886,
+      "tenure": 12,
+      "riskScore": 86,
+      "status": "At Risk",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100641",
+      "clv": 1494,
+      "tenure": 14,
+      "riskScore": 85,
+      "status": "At Risk",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100206",
+      "clv": 5305,
+      "tenure": 61,
+      "riskScore": 85,
+      "status": "At Risk",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100200",
+      "clv": 2359,
+      "tenure": 22,
+      "riskScore": 85,
+      "status": "At Risk",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100279",
+      "clv": 2860,
+      "tenure": 69,
+      "riskScore": 85,
+      "status": "At Risk",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101064",
+      "clv": 1250,
+      "tenure": 13,
+      "riskScore": 85,
+      "status": "At Risk",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100001",
+      "clv": 771,
+      "tenure": 11,
+      "riskScore": 84,
+      "status": "At Risk",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101099",
+      "clv": 188,
+      "tenure": 4,
+      "riskScore": 84,
+      "status": "At Risk",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100972",
+      "clv": 3720,
+      "tenure": 54,
+      "riskScore": 84,
+      "status": "At Risk",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100804",
+      "clv": 1950,
+      "tenure": 63,
+      "riskScore": 84,
+      "status": "At Risk",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100216",
+      "clv": 2214,
+      "tenure": 16,
+      "riskScore": 84,
+      "status": "At Risk",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100219",
+      "clv": 6770,
+      "tenure": 68,
+      "riskScore": 84,
+      "status": "At Risk",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100414",
+      "clv": 2002,
+      "tenure": 30,
+      "riskScore": 80,
+      "status": "At Risk",
+      "lastActive": "11 days ago"
+    },
+    {
+      "id": "CUST100387",
+      "clv": 3160,
+      "tenure": 50,
+      "riskScore": 80,
+      "status": "At Risk",
+      "lastActive": "11 days ago"
+    },
+    {
+      "id": "CUST101082",
+      "clv": 1613,
+      "tenure": 17,
+      "riskScore": 75,
+      "status": "At Risk",
+      "lastActive": "6 days ago"
+    },
+    {
+      "id": "CUST100989",
+      "clv": 5805,
+      "tenure": 71,
+      "riskScore": 68,
+      "status": "Monitoring",
+      "lastActive": "13 days ago"
+    },
+    {
+      "id": "CUST100419",
+      "clv": 1790,
+      "tenure": 18,
+      "riskScore": 32,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100699",
+      "clv": 1708,
+      "tenure": 8,
+      "riskScore": 29,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100151",
+      "clv": 1221,
+      "tenure": 2,
+      "riskScore": 29,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100686",
+      "clv": 1393,
+      "tenure": 4,
+      "riskScore": 27,
+      "status": "Healthy",
+      "lastActive": "14 days ago"
+    },
+    {
+      "id": "CUST100550",
+      "clv": 368,
+      "tenure": 8,
+      "riskScore": 25,
+      "status": "Healthy",
+      "lastActive": "12 days ago"
+    },
+    {
+      "id": "CUST100020",
+      "clv": 569,
+      "tenure": 4,
+      "riskScore": 25,
+      "status": "Healthy",
+      "lastActive": "12 days ago"
+    },
+    {
+      "id": "CUST100230",
+      "clv": 2532,
+      "tenure": 44,
+      "riskScore": 22,
+      "status": "Healthy",
+      "lastActive": "9 days ago"
+    },
+    {
+      "id": "CUST101144",
+      "clv": 1063,
+      "tenure": 6,
+      "riskScore": 21,
+      "status": "Healthy",
+      "lastActive": "8 days ago"
+    },
+    {
+      "id": "CUST100008",
+      "clv": 809,
+      "tenure": 42,
+      "riskScore": 20,
+      "status": "Healthy",
+      "lastActive": "7 days ago"
+    },
+    {
+      "id": "CUST100854",
+      "clv": 661,
+      "tenure": 2,
+      "riskScore": 20,
+      "status": "Healthy",
+      "lastActive": "7 days ago"
+    },
+    {
+      "id": "CUST101171",
+      "clv": 1217,
+      "tenure": 40,
+      "riskScore": 20,
+      "status": "Healthy",
+      "lastActive": "7 days ago"
+    },
+    {
+      "id": "CUST100488",
+      "clv": 700,
+      "tenure": 10,
+      "riskScore": 20,
+      "status": "Healthy",
+      "lastActive": "7 days ago"
+    },
+    {
+      "id": "CUST101104",
+      "clv": 1253,
+      "tenure": 15,
+      "riskScore": 20,
+      "status": "Healthy",
+      "lastActive": "7 days ago"
+    },
+    {
+      "id": "CUST100119",
+      "clv": 1785,
+      "tenure": 16,
+      "riskScore": 19,
+      "status": "Healthy",
+      "lastActive": "6 days ago"
+    },
+    {
+      "id": "CUST101056",
+      "clv": 393,
+      "tenure": 27,
+      "riskScore": 19,
+      "status": "Healthy",
+      "lastActive": "6 days ago"
+    },
+    {
+      "id": "CUST100400",
+      "clv": 1970,
+      "tenure": 16,
+      "riskScore": 19,
+      "status": "Healthy",
+      "lastActive": "6 days ago"
+    },
+    {
+      "id": "CUST100406",
+      "clv": 1776,
+      "tenure": 17,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100303",
+      "clv": 2698,
+      "tenure": 39,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100860",
+      "clv": 2073,
+      "tenure": 20,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100421",
+      "clv": 4167,
+      "tenure": 71,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100612",
+      "clv": 5035,
+      "tenure": 45,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100564",
+      "clv": 2237,
+      "tenure": 19,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100702",
+      "clv": 938,
+      "tenure": 9,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100246",
+      "clv": 568,
+      "tenure": 5,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100384",
+      "clv": 1018,
+      "tenure": 4,
+      "riskScore": 18,
+      "status": "Healthy",
+      "lastActive": "5 days ago"
+    },
+    {
+      "id": "CUST100146",
+      "clv": 1525,
+      "tenure": 27,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100981",
+      "clv": 1094,
+      "tenure": 7,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100763",
+      "clv": 678,
+      "tenure": 18,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100202",
+      "clv": 3005,
+      "tenure": 36,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST101189",
+      "clv": 1988,
+      "tenure": 22,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100659",
+      "clv": 1545,
+      "tenure": 16,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100502",
+      "clv": 1456,
+      "tenure": 45,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100896",
+      "clv": 1745,
+      "tenure": 18,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST101076",
+      "clv": 1573,
+      "tenure": 17,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST101078",
+      "clv": 1384,
+      "tenure": 2,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100492",
+      "clv": 1751,
+      "tenure": 12,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100957",
+      "clv": 2377,
+      "tenure": 19,
+      "riskScore": 17,
+      "status": "Healthy",
+      "lastActive": "4 days ago"
+    },
+    {
+      "id": "CUST100122",
+      "clv": 5335,
+      "tenure": 39,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100775",
+      "clv": 4150,
+      "tenure": 51,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100276",
+      "clv": 830,
+      "tenure": 3,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100794",
+      "clv": 967,
+      "tenure": 3,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100639",
+      "clv": 1374,
+      "tenure": 6,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100577",
+      "clv": 2431,
+      "tenure": 55,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100951",
+      "clv": 4143,
+      "tenure": 38,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100975",
+      "clv": 1611,
+      "tenure": 65,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100262",
+      "clv": 2374,
+      "tenure": 20,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100095",
+      "clv": 2363,
+      "tenure": 22,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100459",
+      "clv": 1960,
+      "tenure": 22,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100379",
+      "clv": 3008,
+      "tenure": 34,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100683",
+      "clv": 1562,
+      "tenure": 9,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST101139",
+      "clv": 1344,
+      "tenure": 10,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST101012",
+      "clv": 2685,
+      "tenure": 36,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST101044",
+      "clv": 1874,
+      "tenure": 30,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100795",
+      "clv": 1644,
+      "tenure": 7,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100391",
+      "clv": 1113,
+      "tenure": 24,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100610",
+      "clv": 6180,
+      "tenure": 57,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100863",
+      "clv": 5072,
+      "tenure": 51,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST101129",
+      "clv": 1727,
+      "tenure": 46,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100725",
+      "clv": 4515,
+      "tenure": 55,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100663",
+      "clv": 3139,
+      "tenure": 19,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST101051",
+      "clv": 1979,
+      "tenure": 56,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100883",
+      "clv": 4760,
+      "tenure": 43,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100931",
+      "clv": 4896,
+      "tenure": 65,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100929",
+      "clv": 4573,
+      "tenure": 38,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100161",
+      "clv": 4473,
+      "tenure": 40,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST101109",
+      "clv": 2362,
+      "tenure": 26,
+      "riskScore": 16,
+      "status": "Healthy",
+      "lastActive": "3 days ago"
+    },
+    {
+      "id": "CUST100484",
+      "clv": 1853,
+      "tenure": 15,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100508",
+      "clv": 5803,
+      "tenure": 71,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100681",
+      "clv": 5784,
+      "tenure": 63,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100392",
+      "clv": 5147,
+      "tenure": 36,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101188",
+      "clv": 3794,
+      "tenure": 64,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101154",
+      "clv": 3604,
+      "tenure": 63,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100642",
+      "clv": 4796,
+      "tenure": 66,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101126",
+      "clv": 3804,
+      "tenure": 72,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100647",
+      "clv": 1367,
+      "tenure": 18,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101020",
+      "clv": 2413,
+      "tenure": 38,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100288",
+      "clv": 1603,
+      "tenure": 60,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100269",
+      "clv": 1334,
+      "tenure": 66,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101130",
+      "clv": 1932,
+      "tenure": 46,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101025",
+      "clv": 4229,
+      "tenure": 29,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100403",
+      "clv": 4979,
+      "tenure": 31,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101071",
+      "clv": 2543,
+      "tenure": 43,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100520",
+      "clv": 494,
+      "tenure": 12,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100856",
+      "clv": 4596,
+      "tenure": 39,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100995",
+      "clv": 6578,
+      "tenure": 70,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101028",
+      "clv": 6730,
+      "tenure": 41,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100189",
+      "clv": 820,
+      "tenure": 29,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100623",
+      "clv": 4205,
+      "tenure": 57,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100719",
+      "clv": 3010,
+      "tenure": 29,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101096",
+      "clv": 2494,
+      "tenure": 14,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100632",
+      "clv": 3633,
+      "tenure": 41,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100819",
+      "clv": 2233,
+      "tenure": 23,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101196",
+      "clv": 3631,
+      "tenure": 19,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100087",
+      "clv": 1389,
+      "tenure": 20,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100337",
+      "clv": 2466,
+      "tenure": 13,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100166",
+      "clv": 1129,
+      "tenure": 57,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101086",
+      "clv": 2396,
+      "tenure": 21,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100919",
+      "clv": 1315,
+      "tenure": 21,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100698",
+      "clv": 5826,
+      "tenure": 61,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100608",
+      "clv": 2518,
+      "tenure": 18,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100187",
+      "clv": 4311,
+      "tenure": 57,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100945",
+      "clv": 1807,
+      "tenure": 42,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100441",
+      "clv": 3001,
+      "tenure": 62,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100466",
+      "clv": 4901,
+      "tenure": 55,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100897",
+      "clv": 3891,
+      "tenure": 54,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100150",
+      "clv": 2289,
+      "tenure": 16,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101016",
+      "clv": 5193,
+      "tenure": 69,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100960",
+      "clv": 3592,
+      "tenure": 35,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100472",
+      "clv": 3550,
+      "tenure": 49,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100197",
+      "clv": 1911,
+      "tenure": 14,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100252",
+      "clv": 3792,
+      "tenure": 45,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100232",
+      "clv": 4642,
+      "tenure": 41,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100935",
+      "clv": 6130,
+      "tenure": 71,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100709",
+      "clv": 2959,
+      "tenure": 37,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100624",
+      "clv": 1534,
+      "tenure": 31,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101142",
+      "clv": 4976,
+      "tenure": 72,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100658",
+      "clv": 2800,
+      "tenure": 25,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101021",
+      "clv": 5198,
+      "tenure": 29,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100134",
+      "clv": 4540,
+      "tenure": 71,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100600",
+      "clv": 3100,
+      "tenure": 25,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100540",
+      "clv": 6657,
+      "tenure": 57,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100565",
+      "clv": 3216,
+      "tenure": 35,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100891",
+      "clv": 1659,
+      "tenure": 62,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100840",
+      "clv": 1344,
+      "tenure": 38,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST101017",
+      "clv": 4129,
+      "tenure": 61,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100640",
+      "clv": 7072,
+      "tenure": 45,
+      "riskScore": 15,
+      "status": "Healthy",
+      "lastActive": "2 days ago"
+    },
+    {
+      "id": "CUST100751",
+      "clv": 3024,
+      "tenure": 42,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101123",
+      "clv": 6545,
+      "tenure": 49,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101124",
+      "clv": 6047,
+      "tenure": 55,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100345",
+      "clv": 3911,
+      "tenure": 45,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100645",
+      "clv": 1643,
+      "tenure": 24,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101030",
+      "clv": 3134,
+      "tenure": 71,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100034",
+      "clv": 5964,
+      "tenure": 63,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100556",
+      "clv": 6317,
+      "tenure": 69,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100121",
+      "clv": 2230,
+      "tenure": 46,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100776",
+      "clv": 646,
+      "tenure": 48,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100378",
+      "clv": 1391,
+      "tenure": 60,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100112",
+      "clv": 2176,
+      "tenure": 66,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100053",
+      "clv": 6024,
+      "tenure": 52,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100091",
+      "clv": 2661,
+      "tenure": 50,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100831",
+      "clv": 2921,
+      "tenure": 32,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100729",
+      "clv": 6176,
+      "tenure": 70,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100474",
+      "clv": 3229,
+      "tenure": 58,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100317",
+      "clv": 4265,
+      "tenure": 46,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100648",
+      "clv": 2480,
+      "tenure": 64,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100672",
+      "clv": 3058,
+      "tenure": 48,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101183",
+      "clv": 3602,
+      "tenure": 66,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101059",
+      "clv": 4951,
+      "tenure": 59,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100815",
+      "clv": 2651,
+      "tenure": 61,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100835",
+      "clv": 4121,
+      "tenure": 62,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100779",
+      "clv": 1439,
+      "tenure": 56,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100769",
+      "clv": 3890,
+      "tenure": 24,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100147",
+      "clv": 6481,
+      "tenure": 54,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101088",
+      "clv": 4791,
+      "tenure": 55,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100241",
+      "clv": 4024,
+      "tenure": 62,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100143",
+      "clv": 7062,
+      "tenure": 67,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100562",
+      "clv": 4292,
+      "tenure": 63,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100040",
+      "clv": 5345,
+      "tenure": 47,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101134",
+      "clv": 6953,
+      "tenure": 54,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100878",
+      "clv": 2985,
+      "tenure": 65,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100103",
+      "clv": 4461,
+      "tenure": 68,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100870",
+      "clv": 5858,
+      "tenure": 64,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100955",
+      "clv": 2036,
+      "tenure": 67,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100563",
+      "clv": 2914,
+      "tenure": 55,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100418",
+      "clv": 3542,
+      "tenure": 36,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100253",
+      "clv": 4886,
+      "tenure": 69,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100159",
+      "clv": 5940,
+      "tenure": 60,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100201",
+      "clv": 6095,
+      "tenure": 70,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100455",
+      "clv": 3184,
+      "tenure": 59,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100402",
+      "clv": 4913,
+      "tenure": 59,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100315",
+      "clv": 3401,
+      "tenure": 64,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100742",
+      "clv": 3419,
+      "tenure": 55,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100627",
+      "clv": 3863,
+      "tenure": 45,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100778",
+      "clv": 4154,
+      "tenure": 54,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST101106",
+      "clv": 2604,
+      "tenure": 52,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    },
+    {
+      "id": "CUST100791",
+      "clv": 3400,
+      "tenure": 56,
+      "riskScore": 14,
+      "status": "Healthy",
+      "lastActive": "1 days ago"
+    }
+  ]
+}

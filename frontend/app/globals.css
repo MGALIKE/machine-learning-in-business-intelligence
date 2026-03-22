@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-950: #050507;
+  --color-surface-900: #0c0c10;
+  --color-surface-800: #131318;
+  --color-surface-700: #1c1c24;
+  --color-surface-600: #26263a;
+  --color-surface-500: #3a3a52;
+
+  --color-emerald-glow: #34d399;
+  --color-teal-glow: #2dd4bf;
+  --color-violet-glow: #8b5cf6;
+  --color-rose-glow: #f43f5e;
+  --color-amber-glow: #f59e0b;
+  --color-sky-glow: #38bdf8;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-surface-950);
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(12, 12, 16, 0.6);
+    backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 16px;
+  }
+
+  .glass-subtle {
+    background: rgba(20, 20, 28, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+  }
+
+  .glow-emerald {
+    box-shadow: 0 0 40px -12px rgba(52, 211, 153, 0.25);
+  }
+
+  .glow-rose {
+    box-shadow: 0 0 40px -12px rgba(244, 63, 94, 0.25);
+  }
+
+  .glow-violet {
+    box-shadow: 0 0 40px -12px rgba(139, 92, 246, 0.25);
+  }
+
+  .glow-sky {
+    box-shadow: 0 0 40px -12px rgba(56, 189, 248, 0.25);
+  }
+
+  .noise-bg {
+    position: relative;
+  }
+
+  .noise-bg::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    /* Removed expensive SVG noiseFilter that kills mobile GPUs. Using lightweight CSS gradient overlay instead. */
+    background: radial-gradient(circle at top left, rgba(52, 211, 153, 0.05), transparent 40%),
+                radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.05), transparent 40%),
+                radial-gradient(circle at center, rgba(56, 189, 248, 0.03), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.14); }
+
+/* Static gradient mesh background (Removed heavy hardware animations) */
+.mesh-gradient {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mesh-gradient .blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.10; /* Lowered opacity slightly for better performance */
+  /* hardware acceleration */
+  will-change: transform;
+}
+
+.mesh-gradient .blob-1 {
+  width: 600px; height: 600px;
+  background: var(--color-emerald-glow);
+  top: -10%; left: -5%;
+  animation-delay: 0s;
+}
+
+.mesh-gradient .blob-2 {
+  width: 500px; height: 500px;
+  background: var(--color-violet-glow);
+  top: 50%; right: -10%;
+  animation-delay: -7s;
+}
+
+.mesh-gradient .blob-3 {
+  width: 400px; height: 400px;
+  background: var(--color-sky-glow);
+  bottom: -5%; left: 30%;
+  animation-delay: -14s;
+}
